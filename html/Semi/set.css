@@ -1,0 +1,11 @@
+/* css들을 설정해주는 곳 */
+li {
+  display: inline-flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#mainlogo {
+  text-align: center;
+}
