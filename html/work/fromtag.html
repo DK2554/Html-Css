@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력태그 사용하기******</title>
+  </head>
+  <>
+    <h1>form태그 활용하기</h1>
+    <p>
+      form태그 주요속성은 method:전송방식(get/post),action:요청할　주소
+    </p>
+    <h3>get방식과 post방식의 차이</h3>
+    <!-- get방식으로 사용시 action주소로 넘긴 url에 ?다음으로 ?namer value형태로 표시가 된다 -->
+    <form action="#" method="get">
+      <input type="text" name="text" />
+      <input type="submit" value="전송" />
+    </form>
+    <h4>post방식으로 전송하기</h4>
+    <form action="#" method="POST">
+      <input type="text" name="content" />
+      <input type="submit" value="전송" />
+    </form>
+    <br>
+
+    <form action="#" method="POST">
+      아이디 &nbsp;&nbsp;<input type="text" name="userid"><br>
+      비밀번호<input type="password" name="userpwd">
+      <input type="submit" value="전송">
+    </form>
+    <br>
+    <h3>fiedset,legend</h3>
+    <fieldset>
+      <legend>로그인</legend>
+    <form action="#" method="get">
+     <!--label태그 사용시 아이디라는 텍스트를 눌렀을때 input으로 커서가 들어감-->
+      <label>아이디<input type="text"name="userid"></label>
+      <br>
+      <label for="pw">패스워드</label>
+      <input id="pw" type="password" name="password" id="">
+      <input type="submit" value="로그인">
+    </form>
+  </fieldset>
+  <h3>input태그에 대해 알아보자</h3>
+  <p>
+    사용자에게 입력받을 때 사용하는 태그
+    type속성으로 입력받는 형식,구성을 달리 할 수 있음
+    input태그는 반드시  form태그안에 있어야하는건 아님
+    </p>
+    <h4>type별로 text,password</h4>
+    <label for="con">아이디</label>
+    <label for="con2">텍스트창</label>
+    <input type="text" name="content" id="con" value="내용을 적을수도 있음"readonly>
+    <input type="text" name="content" id="con2" maxlength="5"placeholder="내용을 입력하세요">
+    <br>
+    <input type="text" name="content" id="con2" size="10"placeholder="내용을 입력하세요">
+<!-- input안에 기본value를 넣을수 있다 그러면 그값이 넘어가거나 지워서 사용하거 할 수 있다
+ readonly를 사용하면 읽기만 가능 수정은 불가능하다
+maxlength는 글자의 수를 제한한다 placeholder는 흐릇한 글씨로 input안에 텍스트를 출력해준다
+size는 입력받을 input창에 사이즈를 조절해준다-->
+<form action="#">
+  <input type="text" name="con4" minlength="3" required>
+  <input type="submit" value="전송">
+
+</form>
+<p>type password</p>
+<label for="pw">패스워드</label>
+<input type="password" name="userPassword" id="pw">
+<input type="password" name="userRepassword" id="rpw">
+<p>type hidden</p>
+<form action="#">
+<p>사용자에게 보여줄 필요는 없지만 서버에서 데이터를 처리할 때 필요한 값을 처리할 때</p>
+<input type="hidden" name="val1" name="boardNo" value="test">
+<input type="submit" value="히든제출">
+</form>  
+<p>type button</p>
+<form action="#">
+  <p>자바스크립트의 함수를 실행시키면서 이벤트 적용</p>
+  <input type="button" value="버튼1" onclick="alert('버튼눌림')">
+</form>
+<p>type checkbox,radio</p>
+<fieldset>
+  <legend>취미</legend>
+  <form action="#">
+    <!-- 문자로 넘어간ㄷ -->
+  <!-- checked옵션을 설정하면 defualt값으로 체크박스를 설정할수 있다 
+  disabled옵션으로 선택을 못하게 설정해줄수 있다.-->
+  <input type="checkbox" name="ck" id="ck"value="운동" disabled>
+  <label for="ck">운동</label>
+  <!-- 체크박스 여러개는 나중에 서버에서 배열로 받는다 -->
+  <input type="checkbox" name="ck1" id="ck1"value="독서">
+  <label for="ck1">독서</label>
+  <input type="checkbox" name="ck2" id="ck2"value="코딩">
+  <label for="ck2">코딩</label>
+  <p>라디오번튼</p>
+  <input type="radio" name="ra1" id=""value="남">남
+  <input type="radio" name="ra1" id=""value="여">여
+<br>
+<input type="submit" value="제출">
+</form>
+</fieldset>
+<p>type file->파일을 서버에 업로드할때 사용</p>
+<form action="" method="get"></form>
+<!-- 바이너리 파일로 넘어간다 -->
+<!-- multiple은 여러가지 속성을 선택해주는것
+  accept속성은 내가 정렬할 파일을 설정해주는것 보일파일
+ -->
+<!-- enctype이라는 속성으로 설정해준다 바이너리 파일을 문자로 보내는것같다 -->
+<form action="#" enctype="multipart/form-data">
+  <input type="file" name="f1"  accept="image/*">
+</form>
+<p>type image->이미지 출력하기</p>
+<form action="#">
+  <input type="text" name="data" id="">
+  <input type="reset" value="취소">
+  <input type="image" src="" name="image"width="100" height="100" alt="">
+</form>
+<h3>html5에 추가된 type</h3>
+<p>color</p>
+<form action="#">
+색상선택<input type="color" name="co" id="">
+<input type="submit" value="전송">
+</form>
+<p>날짜를 입력받는  type</p>
+<form action="">
+  <!--날짜는 넘어가면 String타입으로 넘어가서 파싱해서 사용해야함
+   -->
+  <input type="date" name="day1" id="">
+  <input type="datetime" name="day2" id="">
+  <input type="datetime-local" name="day3" id="">
+  <input type="month" name="day4" id="">
+  <input type="week" name="day5" id="">
+  <input type="time" name="day6" id="">
+  <input type="submit" value="전송">
+</form>
+<p>type number 숫자를 입력받는  input</p>
+<form action="#">
+
+  number<input type="number" name="su" min="0" max="10" step="5" id="">
+  range<input type="range" name="" id="" min="0" max="10" step="2">
+  search <input type="search" name="keyword" id="">
+  url <input type="url" name="homesite" id="">
+  email <input type="email" name="email" id="">
+  <input type="submit" value="전송">
+</form>
+<h3>기타 입력받을 수 있는 태그</h3>
+<p>
+  select: combobox같이 입력받는것 ->안에 option태그가 있다
+  option: list를 설정하는 태그
+  datalist: input태그 리스트로 출력해주는 태그->추천검색,있는 자료불러오기
+  textarea: 여러문장을 입력받는 태그,글을 입력할 수 있는 태그
+  
+</p>
+<form action="#">
+<select name="sel1" id="">
+  <option value="서울">서울</option>
+  <option value="경기도">경기도</option>
+  <option value="강원도">강원도</option>
+</select>
+<input type="text" name="tt" list="data" id="">
+<datalist id="data">
+  <option value="서울" label="seoul"></option>
+  <option value="경기도" label="gyunggido"></option>
+  <option value="강원도"label="ganwondo"></option>
+</datalist>
+<input type="submit" value="전송">
+</form>
+<p>글을 작성하는 입력창</p>
+<textarea name="" id="" cols="10" rows="3" style="resize:none">안녕하세요</textarea>
+<progress id="p" value="0"max="100"></progress>
+<script>
+  setInterval(function(){
+    var pro=document.getElementById("p");
+    pro.value=pro.value+(Number)(Math.random()*50);
+    if(pro.value===100){
+      pro.value=0;
+    }
+  },500)
+</script>
+</body>
+</html>
