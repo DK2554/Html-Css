@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>css 적용구조</title>
+  </head>
+  <!--외부css파일을 이용해서 style적용하기  -->
+  <style>
+    h1 {
+      color: tan;
+      background-color: black;
+    }
+  </style>
+  <body>
+    <h1>이건 style태그로 스타일을 준것</h1>
+    <p>이건 css파일로 스타일을 준것</p>
+    <h2 style="color: blueviolet; background-color: black;">
+      이건 인라인으로 스타일 준것,인라인은 사용안하는것이 좋다
+    </h2>
+    <style>
+      /*태그명[속성명 비교연산(=,*=,^=,~=,|=)]{스타일속성}*/
+      input[type="text"] {
+        color: tomato;
+      }
+      [width="100"] {
+        background-color: cyan;
+      }
+      a[href~="com"] {
+        background-color: #81f781;
+      }
+      a[href|="naver"] {
+        background-color: #f5a9e1;
+      }
+      a[href^="www"] {
+        background-color: #f5a9d0;
+      }
+      a[href$="com"] {
+        color: #2efe64;
+      }
+      a[href*="av"] {
+        font-size: 30px;
+      }
+      /* 속성명*=값 : 포함여부 */
+      /* 속성명 $=값: 끝글자가 값이 있는걸 */
+      /* 속성명 ~=값 : 띄어쓰기를 기준으로 값이 있는지 확인 */
+      /* 속성명 |= 값: - 를 기준으로 값이 있는지 확인 */
+      /* 속성명^=값 :시작글자가 값이 있는걸 찾기 */
+    </style>
+    <a href="www naver.com">^=</a>
+    <a href="www-naver.com">^=</a>
+    <a href="naver com">네이버</a>
+    <a href="naver net">네이버</a>
+    <a href="naver co kr">네이버</a>
+    <a href="naver-net">-기준으로적용</a>
+    <a href="naver~net">-기준으로적용</a>
+    <a href="naver~net">-기준으로적용</a>
+    <input type="text" name="userId" id="" /><br />
+    <input type="password" name="password" id="" />
+    <p width="100" height="100">이거는 적용 되닌?</p>
+    <ul>
+      <li width="100">1</li>
+      <li width="200">2</li>
+    </ul>
+    <h3>자식/후손선택자</h3>
+    <p>
+      자식선택자:부모하고 직접연결되어 있는 태그만 선택 -> ">"로 표시 *선택자
+      >선택자 / 후손선택자:부모하고 직/간접적으로 연결된 태그 모두 ->"
+      "띄어쓰기로 표시함 *선택자 선택자
+    </p>
+    <style>
+      header > h1 {
+        color: lightsalmon;
+        font-size: 35px;
+      }
+      .innerdiv > h1 {
+        color: magenta;
+      }
+    </style>
+    <header>
+      <h1>자식선택자</h1>
+      <ul>
+        <li>직접연결안됨</li>
+      </ul>
+      <p>자식선택자</p>
+      <div class="innerdiv">
+        <h1>이건 div밑 h1</h1>
+      </div>
+    </header>
+    <section>
+      <table>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+      </table>
+      <ul>
+        <li>하나</li>
+        <li>둘</li>
+        <li>셋</li>
+        <li>넷</li>
+        <li>
+          <ul>
+            <li>내부list</li>
+            <li>내부list</li>
+            <li>내부list</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <style>
+      section li {
+        color: orangered;
+        background-color: palegreen;
+      }
+    </style>
+  </body>
+</html>

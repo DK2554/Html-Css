@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selecter</title>
+  </head>
+  <body>
+    <h3>전체 선택자</h3>
+    <p>선택자에 *로 선언하면 됨</p>
+    <table>
+      <tr>
+        <td>변함</td>
+        <td>변함</td>
+        <td>변함</td>
+      </tr>
+    </table>
+    <style>
+      * {
+        font-size: 20px;
+      }
+    </style>
+    <h3>태그선택자</h3>
+    <p>선택자에 태그명을 작성해서 특정태그를 선택하는것</p>
+    <style>
+      table {
+        height: 200px;
+        width: 200px;
+        border: 1px orange solid;
+      }
+      td {
+        border: 1px green dotted;
+      }
+    </style>
+    <table>
+      <tr>
+        <td>안녕</td>
+        <td>하이</td>
+        <td>올라</td>
+      </tr>
+      <tr>
+        <td>잘지냄</td>
+        <td>how are you</td>
+        <td>자니?</td>
+      </tr>
+    </table>
+    <h3>아이디선택자</h3>
+    <p id="p1">
+      태그에 속성으로 설정된 id속성의 값을 기준으로 선택 id속성은 페이지내에서
+      유일한 값이여야한다.
+    </p>
+    <p>나는?</p>
+    <p>나도</p>
+    <p>야 나는?</p>
+    <p>나도 해줘</p>
+    <style>
+      #p1 {
+        font-size: 10px;
+        color: red;
+        background-color: black;
+      }
+    </style>
+    <h3>클래스 선택자</h3>
+    <p>
+      태그이 속성중 class속성의 값으로 스타일 적용 태그를 선택 중복값을 허용한다
+    </p>
+    <div>
+      <p>div안의 p태그</p>
+      <h4 class="classtest">div안의 h4태그</h4>
+      <ul>
+        <li>li태그</li>
+        <li class="classtest">li태그</li>
+      </ul>
+      <ul>
+        <li class="classtest">두번째 li태그</li>
+        <li>두번째 li태그</li>
+      </ul>
+    </div>
+    <style>
+      .classtest {
+        background-color: skyblue;
+      }
+    </style>
+  </body>
+</html>

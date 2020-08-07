@@ -7,5 +7,26 @@ li {
   margin-bottom: 20px;
 }
 #mainlogo {
+  height: 50px;
   text-align: center;
+  background-color: #f5a9e1;
+}
+#nav_mu {
+  height: 80px;
+  padding-top: 15px;
+  background-color: #bef781;
+}
+.section {
+  background-color: #819ff7;
+  font-size: 100px;
+}
+.foot {
+  background-color: #f6cef5;
+}
+section {
+  display: inline-block;
+}
+aside {
+  display: inline-flex;
+  background-color: #5858fa;
 }

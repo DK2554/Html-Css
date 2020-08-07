@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원정보</title>
+  </head>
+  <body>
+    <form action="#" method="GET">
+      <label for="client">고객명 :</label>
+      <input type="text" name="cname" value="" id="client" />
+      <br />
+      <label for="phone">전화번호 :</label>
+      <input type="text" name="phone" value="" id="phone" />
+      <br />
+      <label for="eamil">E-mail :</label>
+      <input type="text" name="eamil" value="" id="eamil" />
+      <br />
+   
+   
+    <br />
+    <form action="#">
+      <fieldset name="size">
+        <legend>피자사이즈</legend>
+        <!-- 라디오 버튼은 name을 동일 이름으로 적어야 중복클릭 불가 -->
+        <input type="radio" name="size" id="samll" />
+        <label for="small">Small</label>
+        <br />
+        <br />
+        <input type="radio" name="size" id="Medium" />
+        <label for="Medium">Medium</label>
+        <br />
+        <br />
+        <input type="radio" name="size" id="Large" />
+        <label for="Large">Large</label>
+      </fieldset>
+   
+    <br />
+    <form action="#" method="get">
+      <fieldset name="select">
+        <legend>토핑선택</legend>
+        <input type="checkbox" name="ck1" id="b" />
+        <label for="b">베이컨</label>
+        <br />
+        <br />
+        <input type="checkbox" name="ck2" id="c" />
+        <label for="c">치즈</label>
+        <br />
+        <br />
+        <input type="checkbox" name="ck3" id="o" />
+        <label for="o">양파</label>
+        <br />
+        <br />
+        <input type="checkbox" name="ck4" id="m" />
+        <label for="m">버섯</label>
+      </fieldset>
+   
+    <br />
+    <br />
+    <form action="#">
+      <label for="tt">희망배송시간 :</label>
+      <input type="time" name="time" id="tt" />
+      <br />
+   
+    <br />
+    <form action="#">
+      <label for="text">배송시 요청사항 :</label>
+      <textarea name="name" id="" cols="20" rows="3"></textarea>
+   
+    <br />
+    <input type="submit" value="주문하기" />
+  </body>
+</html>

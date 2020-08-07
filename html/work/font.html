@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자스타일 속성</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dokdo&family=Hi+Melody&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h3>글꼴설정하기</h3>
+    <div class="content">
+      <p id="family" class="bold">이글꼴을 바꿔보자</p>
+      <h3 id="dok">독도는 우리땅! 쪽바리안돼!</h3>
+      <h3 id="dok" class="light">독도는 우리땅! 쪽바리안돼!</h3>
+      <h3 id="dok" class="bold fstyle">독도는 우리땅! 쪽바리안돼!</h3>
+      <p>APPLE<span class="variant fstyle">apple</span></p>
+      <p class="fonttotal fontcolor">
+        여러분 css힘들죠.. 그냥 듣고 치기만해서.ㅠ 그래도 잘들어야해요
+      </p>
+    </div>
+    <p class="deco">밑줄적용하기</p>
+    <style>
+      /* 텍스트스타일 적용하기 */
+      .deco {
+        /* text-decoration : 글자의 밑줄, 취소선, 윗줄, 줄삭제 
+                속성값 : underline, line-through, overline, none
+            */
+        text-decoration: underline;
+      }
+
+      .fontcolor {
+        /* color:rgb(156,255,0); */
+        color: #ff00ff;
+      }
+      .fonttotal {
+        font: italic normal bolder 30px "Dokdo";
+      }
+      .fstyle {
+        font-style: italic;
+      }
+      .variant {
+        font-variant: small-caps;
+      }
+      body {
+        font-size: 10px;
+      }
+      .content {
+        font-size: 30px;
+      }
+      p#family {
+        font-family: "HI Melody", "돋움";
+        /* font-size : 30px; */
+        /* font-size : 2em;바로위 부모의 글자크기에 따라 변경 */
+        font-size: 2rem;
+      }
+      h3#dok {
+        font-family: "Dokdo";
+      }
+      .light {
+        font-weight: lighter;
+      }
+      .bold {
+        font-weight: bolder;
+      }
+    </style>
+  </body>
+</html>

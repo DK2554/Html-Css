@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selecter2편</title>
+  </head>
+  <body>
+    <h3>동등선택자</h3>
+    <p>
+      태그의 위치(level)가 같은 곳에 있는 태그를 선택하는것 선택자+선택자:
+      다음에 있는 태그 한개 선택자~선택자:다음에 있는 태그 전체
+    </p>
+
+  <header>
+    <p>1번p</p>
+    <p>2번p</p>
+    <p>3번p</p>
+    <h4>4번h4</h4>
+    <h4>5번h4</h4>
+  </header>
+  <style>
+    p + h4 {
+      color: hotpink;
+      background-color: purple;
+    }
+    p + p {
+      color: royalblue;
+      color: limegreen;
+    }
+  </style>
+  <h3>반응선택자</h3>
+  <p>마우스 움직임에 따라 스타일을 적용하는 선택자
+    <p>:hover:마이수가 지정 태그(elements)범위에 들어왔을떄</p>
+    <p>:active:마우스가 지정 태그(elements)를 클릭했을때</p>
+  </p>
+  <p id="p1">1 p태그</p>
+  <p class="p2">2 p태그</p>
+  <div>
+      <p>div안에 p</p>
+      <ul>
+          <li>이것도 변경</li>
+          <li id="that">이것도 변경</li>
+          <li>이것도 변경</li>
+      </ul>
+  </div>
+  <style>
+      #p1:hover,p+p:hover{
+          color:red;
+          background-color: peru;
+
+      }
+      div #that:active{
+          font-size:40px;
+
+      }
+  </style>
+  <h3>문자 선택자</h3>
+  <style>
+    p::first-letter{
+        font-size:30px
+    }
+    p::first-line{
+        background-color: tan;
+    }
+    p::after{
+        content:"-bs-";
+    }
+   
+    p{
+        counter-increment:rint;
+    }
+    p::before{
+        content:counter(rint);
+    }
+    p::selection{
+        background-color: crimson;
+    }
+  </style>
+  <p>나의 이름은 유병승입니다. 사는곳은 경기도 시흥시이구요
+      <br>
+      나의 나이는 19살입니다
+  </p>
+  <p>나의 취미는 코딩하기 프로그래밍 공부하기!</p>
+
+  <p>
+      구조에의해 선택하는것
+      선택자:first-child
+      선택자:last-child
+      선택자:nth-child(수식)
+  </p>
+  <style>
+      h5:first-child{
+       background-color: cyan;
+      }
+      h5:nth-child(2){
+          color:purple
+      }
+      h5:last-child{
+          background-color: lightblue;
+      }
+       h5:last-of-type{
+        background-color: red;
+    }
+  </style>
+  <div>
+      <!-- <span>하하하하하</span> -->
+      <h5>구조선택자</h5>
+      <h5>두번째</h5>
+      <h5>세번째</h5>
+      <h5>네번째</h5>
+  </div>
+  <ul>
+      <li>
+          <a href="">내용1</a>
+          <a href="">내용2</a>
+          <a href="">내용3</a>
+      </li>
+      <li>
+        <a href="">내용4</a>
+      </li>
+      <li>
+          <a href="">내용5</a>
+      </li>
+      <li>
+          <a href="">내용6</a>
+      </li>
+      <li>
+          <a href="">내용7</a>
+      </li>
+  </ul>
+  <style>
+      li:first-child>a{
+          background-color:#E2A9F3 ;
+      }
+      li>a:first-child{
+          background-color: blue;
+      }
+    /* first-of-type 
+      last-of-type
+      nth-of-type
+    */
+   
+  </style>
+  </body>
+</html>
