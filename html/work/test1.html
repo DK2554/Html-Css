@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/test.css" />
+    <title>test</title>
+  </head>
+  <body>
+    <header><h1>HTML5 & CSS3</h1></header>
+    <nav>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JAVASCRIPT</li>
+        <li>JQUERY</li>
+        <li>HTML API</li>
+      </ul>
+    </nav>
+    <section>
+      <article>
+        <p>이 영역은 소제목과 내용으로 구성되는 영역입니다</p>
+        <img src="123.JPG" alt="사진" width="300" height="300" />
+        <p>section안에 article안에 img태그를 사용하였습니다</p>
+      </article>
+    </section>
+    <footer>
+      <h4>이문서는 HTML5를 기준으로 작성되었습다</h4>
+
+      <h4>이 영역은 FOOTER영역입니다.</h4>
+    </footer>
+    <div>
+      <h1>서브 메뉴가 펼쳐지는 네비게이션 만들기</h1>
+      <ul id="main-menu">
+        <li><a>HOME</a></li>
+        <li>
+          <a>웹개발</a>
+          <ul class="sub-menu">
+            <li><a>웹디자인</a></li>
+            <li><a>html+css</a></li>
+            <li><a>jquery</a></li>
+            <li><a>웹+ 모바일</a></li>
+          </ul>
+        </li>
+        <li>
+          <a> 게시판</a>
+          <ul class="sub-menu">
+            <li><a>Q&A</a></li>
+            <li><a>방명록</a></li>
+          </ul>
+        </li>
+        <li><a>상품주문서</a></li>
+      </ul>
+    </div>
+    <br />
+    <br />
+
+    <div>
+      <fieldset>
+        <legend>로그인 정보</legend>
+        <ol>
+          <li><label for="id">아이디</label> <input type="text" id="id" /></li>
+          <li>
+            <label for="pw">비밀번호</label> <input type="password" id="pw" />
+          </li>
+          <li>
+            <label for="rpw">비밀번호 확인</label>
+            <input type="password" id="rpw" />
+          </li>
+          <li>
+            <label for="grde">회원등급</label>
+            <input type="text" id="grde" value="준회원" />
+          </li>
+        </ol>
+      </fieldset>
+      <fieldset>
+        <legend>개인 정보</legend>
+        <ol>
+          <li>
+            <label for="name">이름</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="5미만 공백없이"
+              maxlength="4"
+            />
+          </li>
+          <li>
+            <label for="email">메일 주소</label
+            ><input type="email" placeholder="abcd@domain.com" />
+          </li>
+          <li>
+            <label for="phone">연락처</label><input type="text" id="phone" />
+          </li>
+        </ol>
+      </fieldset>
+      <fieldset>
+        <legend>코딩 숙련도</legend>
+        <ol>
+          <li></li>
+        </ol>
+      </fieldset>
+    </div>
+  </body>
+</html>
