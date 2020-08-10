@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css3 Style property</title>
+    <style>
+      #hidden {
+        visibility: hidden;
+      }
+      #box > #hidden:hover {
+        visibility: visible;
+      }
+    </style>
+  </head>
+
+  <body>
+    <span>Dummy</span>
+    <div id="box">
+      <span id="hidden">안녕하세요</span>
+    </div>
+    <span>Dummy</span>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+h2 {
+  border-bottom: 1px solid rgb(191, 188, 188);
+  padding-bottom: 20px;
+}
+#navi,
+.sunvai {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: auto;
+}
+#navi > li {
+  float: left;
+  border: 1px black solid;
+  background-color: lightblue;
+  font-size: 1em;
+}
+#navi > li > a {
+  display: block;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.sunavi > li {
+  padding: 0px;
+  font-size: 13px;
+}
+.sunavi {
+  list-style: none;
+  position: absolute;
+  background-color: aqua;
+  visibility: hidden;
+  border-bottom: solid 1px (0, 0, 0, 0, 20);
+  text-decoration: none;
+  padding: 0px;
+  width: auto;
+  opacity: 0;
+}
+.sunavi > li > a {
+  text-decoration: none;
+  color: black;
+}
+.sunavi > li:active {
+  background-color: skyblue;
+  opacity: 0.5;
+}
+#navi > li:hover .sunavi {
+  opacity: 1;
+  visibility: visible;
+}

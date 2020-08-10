@@ -1,0 +1,21 @@
+img {
+  float: left;
+}
+table {
+  float: right;
+}
+#content {
+  height: 400px;
+  background-color: gray;
+}
+
+nav {
+  background-color: khaki;
+}
+footer {
+  text-align: center;
+  background-color: skyblue;
+  padding: 40px 0px;
+  height: 80px;
+  width: auto;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div {
+        margin: 10px;
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        border: 10px solid black;
+      }
+      div:first-child {
+        background: red;
+        box-sizing: content-box;
+      }
+      div:nth-child(2) {
+        background: orange;
+        box-sizing: border-box;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div>패딩은 div태그 를 둘러싼 border의 안에 있다</div>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+form {
+  background-color: green;
+  border-radius: 15px;
+  width: 70%;
+  padding: 10px;
+}
+li {
+  list-style: none;
+  border: 1px solid white;
+  padding: 10px 0px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  font: 0.5em;
+}
+input {
+  margin-left: 50px;
+  padding-right: 50px;
+}
+a {
+  width: 50px;
+}
+ol {
+  padding: 0px;
+}
+
+#button {
+  margin-left: 20px;
+  border-radius: 5px;
+  width: 50px;
+  background-color: rgb(72, 174, 72);
+}
+li > label {
+  padding-left: 20px;
+}
+#rang {
+  margin-left: 10px;
+}
