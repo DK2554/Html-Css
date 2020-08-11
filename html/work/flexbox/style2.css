@@ -1,0 +1,87 @@
+:root {
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+}
+body {
+  margin: 0;
+  font-family: "배달의민족 도현";
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #aab6fe;
+  padding: 8px 16px;
+}
+.navbar_logo {
+  font-size: 24px;
+}
+.navbar_logo i {
+  color: var(--accent-color);
+}
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+.navbar_menu li {
+  padding: 8px 12px;
+  /* padding을 사용하면 클릭할수 있는 영역이 넓어진다 */
+}
+.navbar_menu li:hover {
+  background: var(--background-color);
+  border-radius: 5px;
+  opacity: 0.5;
+}
+.navbar_icons {
+  list-style: none;
+  display: flex;
+  color: var(--text-color);
+}
+.navbar_icons li {
+  padding: 8px 12px;
+}
+.navbar_toogleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #ffbd45;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    padding-left: 0;
+  }
+  .navbar_toogleBtn {
+    display: block;
+  }
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+}

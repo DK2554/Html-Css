@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+#navber {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: #60ad5e;
+}
+#nav_menu {
+  display: flex;
+  padding-left: 0;
+}
+#nav_menu > li:hover {
+  background: #8d8d8d;
+  border-radius: 5px;
+}
+#nav_menu > li {
+  list-style: none;
+  padding: 8px 16px;
+}
+#nav_icon {
+  list-style: none;
+  display: flex;
+}
+#nav_icon > li {
+  padding: 8px 16px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
