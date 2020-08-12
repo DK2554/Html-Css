@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes ani1 {
+        from {
+          background-color: black;
+          border-radius: 30px;
+          font-size: 30px;
+          transform: rotate(0deg);
+        }
+        to {
+          background-color: skyblue;
+          border: 5px crimson dotted;
+          font-size: 15px;
+          transform: rotate(360deg);
+        }
+      }
+      .testani {
+        animation-name: ani1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        width: 100px;
+        height: 100px;
+      }
+      @keyframes ani2 {
+        0% {
+          background-color: springgreen;
+          width: 100px;
+          height: 100px;
+        }
+        20% {
+          background-color: crimson;
+          width: 200px;
+          height: 200px;
+        }
+        30% {
+          background-color: lightcoral;
+          width: 300px;
+          height: 300px;
+          transform: rotate(360deg);
+        }
+
+        50% {
+          background-color: lightgrey;
+          width: 200px;
+          height: 200px;
+          transform: scale(2);
+        }
+        100% {
+          background-color: olivedrab;
+          transform: skewX(20deg, 20deg);
+        }
+      }
+      .testani2:hover {
+        width: 50px;
+        height: 50px;
+        animation: ani2 3s infinite alternate;
+      }
+      ul {
+        padding: 0;
+      }
+      header > nav > ul > li {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: bolder;
+        color: limegreen;
+        margin-right: 50px;
+        cursor: pointer;
+        padding-right: 20px;
+        margin: 0;
+      }
+      header > nav > ul > li:hover {
+        animation: menumove 0.5s infinite alternate;
+      }
+      @keyframes menumove {
+        from {
+          transform: translateX(3px);
+        }
+        to {
+          transform: translateX(-3px);
+          transform: scale(2, 2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testani2">시작</div>
+    <!-- <img src="/me.jpg" alt="" class="testani" /> -->
+    <header>
+      <nav>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

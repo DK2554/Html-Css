@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변형속성 이용하기</title>
+    <style>
+      img {
+        width: 150px;
+        height: 200px;
+      }
+      .trans:active {
+        /* translate태그를 특정위치로 이동시키는 함수 */
+        /* transform: translateY(200px);
+        transform: translateX(200px); */
+        transform: perspective(200px) translateZ(100px);
+      }
+      .scale:hover {
+        /* transform: scale(2, 2); */
+        transform: scaleX(1.5);
+        /* 태그를 확대 축소함수 */
+      }
+      .rotate:hover {
+        /* 태그를 회전시키는 함수 */
+        /* transform: rotate(60deg); */
+        /* 3D로 설정할 수 도있음 */
+        transform: perspective(200px) rotateY(120deg);
+      }
+      .skew:hover {
+        /* transform: skew(10deg, 20deg); */
+        transform: skewX(20deg);
+      }
+      .transition{
+          width: 100px;
+          height: 100px;
+          border: 1px black solid;
+          transition-property: background-color;
+          transition-duration :5s;
+
+      }
+      .transi:hover{
+          background-color: red;
+          transform: perspective(200px) rotateX(45deg);
+          transition-duration :10s;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>태그 이동시키기</h1>
+    <img src="/me.jpg" alt="me" class="trans" />
+    <img src="/me.jpg" alt="me" class="scale" />
+    <img src="/me.jpg" alt="me" class="rotate" />
+    <img src="/me.jpg" alt="me" class="skew" />
+    <p class="rotate"">힘내라</p>
+
+    <h1>트렌지션 적용하기</h1>
+    <p>transform으로 태그가 변경할때 부드러운 변형을 보이게 하는 속성
+        transition-property:적용할 속성
+        transition-duration:진행시간
+        transtion-timting-fuction:linear,ease,ease-in,ease-out
+        trasition:한번에 설정가능
+    </p>
+    <div class="transition transi"></div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+#bimg {
+  border: 1px black solid;
+  height: 25vh;
+  background-image: url(/image/br.jpg);
+}
+#hederbar {
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+#hederbar > ul {
+  list-style: none;
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#mainPo {
+  background-color: skyblue;
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  border: 1px solid black;
+  margin: 0;
+  justify-content: space-around;
+  padding-left: 0;
+}
+.navbar > li {
+  padding: 16px 24px;
+}
+.headerme > li {
+  padding: 8px 16px;
+}
+.headerme {
+  position: relative;
+}
+.heder_logo {
+  font-size: 60px;
+  padding-left: 20px;
+}
+#searrank {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+}
+#mainfoo {
+  border: 1px solid black;
+}
+#mainText {
+  border: 1px black solid;
+}

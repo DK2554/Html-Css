@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h1>데이터 출력하기</h1>
+    <p>
+      데이터를 출력하는 방법 브라우저에 출력: 개발자도구에
+      출력:document.write("값"),alert('값') element.innerHTML= 개발자도구에
+      출력:console.login("값");
+    </p>
+    <div id="test"></div>
+    <script>
+      document.write("<h3>이건 스크립트가 추가한내용</h3>");
+      document.write("태그가없는 문구");
+      document.getElementById("test").innerHTML = "<h1>안녕하세요</h1>";
+      console.log("콘솔실행");
+      //console.log(document.getElementById("test"));
+      // console.dir(document.getElementById("test"));
+    </script>
+    <h1>사용자에게 데이터 입력받기!</h1>
+    <p>
+      1.window객체가 지원하는 함수를 이용 confirm(),prompt() 2.input태그를
+      이용해서 입력받는 방법
+    </p>
+    <input type="text" name="name" /><button onclick="ckeckVal()">
+      입력받기
+    </button>
+  </body>
+</html>

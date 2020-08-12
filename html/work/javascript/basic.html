@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>자바 스크립트 이용하기</h1>
+    <p>
+      자바스크립트 이용하는 방법은 3가지가 있음 1.inline방식:태그의 속성에
+      (이벤트) 스크립트문을 작성하는것 2.internal방식:script태그 안에서
+      스크립트문을 작성하는것 3.external방식 :js파일을 생성해서 파일에
+      스크립트문을 작성하는것 *파일을 불러와서 사용
+    </p>
+    <h3>inline방식</h3>
+    <p onclick="alert('하이');">inline방식의 스크립트</p>
+    <h3>internal방식</h3>
+    <script>
+      alert("internal방식으로실행");
+    </script>
+    <h3>external방식</h3>
+    <p>외부에 파일을 js파일 생성하고 그 파일을 불러와서 실행하는것</p>
+    <h3>자바스크립트를 지원하지 않는 브라우저에 경고 문구 띄워주기</h3>
+    <noscript>
+      <p style="color: red; font-size: 30px;">
+        지원하지 않는 브라우저에 문구띄워주기
+      </p>
+    </noscript>
+  </body>
+</html>
