@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="array.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>배열을 선언하고 활용해보자</h3>
+    <p>
+      자바스크립트의 배열은 자바의 컬렉션과 유사함 자바스크립트의 배열을
+      특정자료형에 한정하지 않고 모든 자료형(다양한)을 저장할 수 있음
+    </p>
+    <h3>배열(==객체)내장함수 알아보기</h3>
+    <p>indexof():배열에 매개변수와 일치하는요소(값)있는 인덱스를 리턴해준다</p>
+    <div id="area"></div>
+    <input type="text" id="key" placeholder="찾을 도시" />
+    <button onclick="indexOfTest();">위치찾기</button>
+    <p>concat(배열):두개이상의 배열을 연결</p>
+    <button onclick="concatTest();">concat</button>
+    <div id="area1"></div>
+    <p>join():배열을 결합 문자열로 만들어주는 함수</p>
+    <button onclick="joinTest();">join</button>
+    <div id="area2"></div>
+    <p>reverse():배열을 순서를 변경</p>
+    <p>sort(정렬처리함수):정렬하기</p>
+    <h3>배열의 데이터를 조작하는 함수</h3>
+    <p>
+      push():배열에 맨뒤에 추가하는 요소 pop():배열의 맨뒤에 요소를 빼느 용도
+    </p>
+
+    <p>unshift():맨앞에 요소를 추가하는 함수</p>
+    <p>shift():맨앞에 요소를 삭제하는 함수</p>
+    <p>
+      slice():배열의 일부를 잘라내서 새 배열만들기 splice():배열의 특정위치 값을
+      지우고, 그 위치에 값을 추가
+    </p>
+    <p>
+      find(): 요소를 찾는 함수 특정조건에 있는 요소 filter():특정조건에 있는
+      여러개의 요소를 찾는 함수
+    </p>
+
+    <p>forEach():배열전체를 순회하는 함수</p>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내장함수 알아보기</title>
+    <script src="infunctino.js"></script>
+  </head>
+  <body>
+    <h3>인코딩관련 내장함수</h3>
+    <p>인코딩,디코딩관련 함수</p>
+    <p>
+      네트워크상 정보 공유를 위해서 아스크코드,유니코드값으로 데이터를
+      변경하는것
+    </p>
+    <p>
+      인코딩/디코딩은 mapping escape /unescape :영문,알파벳,숫자,일부 특수문자를
+      제와한 모든 문자를 인코딩(@,*,-,_,.,/)
+      <br />
+      encodeURI/decoeURI :escape에서 인터넷주소에 사용되는 일부 특수문자(: ; / =
+      ? &)는 변환하지 않음<br />
+      encodeURIComponent / decodeURIComponent:알파벳,숫자를 제외한 모든 문자를
+      인코딩(UTF-8)
+    </p>
+    <button onclick="test();">실행확인</button>
+    <div id="area"></div>
+
+    <h3>eval(): 문자열로 작성된 js코드를 동적으로 변환해 주는 함수</h3>
+    숫자입력 : <input type="text" id="num1" /> 숫자입력 :
+    <input type="text" id="num2" />
+    <div id="area1"></div>
+    <button onclick="test2()">실행</button>
+    <h3>isNaN 함수</h3>
+    <p>NaN: Not a Number</p>
+
+    <h3>내장객체 Date</h3>
+    <p>자바스크립트에서 날짜를 처리하는 객체</p>
+
+    <div id="contaniner">
+      <h1>현재시간 : <span id="time"></span></h1>
+    </div>
+  </body>
+</html>

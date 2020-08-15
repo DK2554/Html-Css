@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="work,.js"></script>
+    <title>실습문제1</title>
+  </head>
+  <body>
+    <h1>실습문제1</h1>
+
+    <label for="byer">구매자 :</label>
+    <input type="text" id="byer" /><br />
+    <label for="tt">상품명 :</label>
+    <input type="text" id="tt" /><br />
+    <label for="price">가격 :</label>
+    <input type="text" id="price" />만원<br /><br />
+    <button onclick="inputprint();">
+      입력값 출력하기</button
+    ><br />
+    <br />
+    <textarea name="" id="date" cols="40" rows="20"></textarea>
+    <hr />
+    <h2>실습문제</h2>
+    <fieldset>
+      <legend>납품정보</legend>
+      <ul>
+        <li>
+          <label for="name">상품명 :</label>
+          <select name="" id="name">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </li>
+        <li>
+          <label for="count">수량</label>
+          <input type="text" id="count" />
+        </li>
+        <li>
+          <label for="grade">납품등급 : </label>
+          <input type="range" name="" id="grade" />
+        </li>
+        <li>
+          <label for="tt">기타사항</label>
+          <textarea name="" id="tt1" cols="30" rows="10"></textarea>
+        </li>
+      </ul>
+    </fieldset>
+    <button onclick="sendmessage();"></button>
+  </body>
+</html>

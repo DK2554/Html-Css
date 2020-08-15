@@ -1,0 +1,34 @@
+#input_login > form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin: 0 auto;
+  width: 780px;
+}
+#input_login {
+  background-color: #b2fab4;
+}
+
+#header_logo {
+  background-color: #ffff81;
+}
+#l_footer {
+  background-color: #e5ffff;
+}
+#header_logo {
+  text-align: center;
+}
+#find_login > ul {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+#find_login > ul > li {
+  list-style: none;
+  padding: 8px 16px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
+}

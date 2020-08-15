@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="value.js"></script>
+  </head>
+  <body>
+    <h2>변수에 대해 알아보자</h2>
+    <p>
+      변수는 데이터를 보관하기 위한 저장공간<br />
+      자바스크립트에서는 변수를 선언하는 방법은 var 변수명<br />
+      선언시에 자료형을 선언하지 않음,하지만 자료형은 있음 변수는 접근할 수 있는
+      범위에 따라 global영역:기본적으로 var변수로 선언하는것 window객체에
+      멤버변수로 되는것 local영역:function내부에 선언된 var변수
+    </p>
+    <h3>자료형</h3>
+    <p>
+      자바스크립트에서 변수의 자료형을 변수에 들어오는 값(리터럴)에 의해
+      자료형이 결정됨<br />
+      자료형별 리터럴 표현방식을 알아보고 변수에 넣어보자
+    </p>
+    <button onclick="testType();">변수타입 알아보기</button>
+    <div id="type"></div>
+    <h2>변수의 타입 확인하기 :typeof</h2>
+    <p>
+      typeof(변수명)->문자형으로 자료형을 반환을 해줌
+    </p>
+    <button onclick="checkType()">자료형확인하기</button>
+    <div id="checkTyep"></div>
+  </body>
+</html>
