@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+<body>
+<style>
+    input#test1{
+        width:100px;
+    }
+    div#result1{
+        border :1px red solid;
+        width:100%;
+        height:100px;
+    }
+</style>
+<script>
+    function button1(){
+        var e = document.getElementById("test1").value.length
+        var text1=document.getElementById("result1");
+        text1.innerHTML=`보기의 문자열 길이는 ${e}글자입니다`;
+        console.log(e);
+    }
+</script>
+
+<h2>기본 문법 문제</h2>
+<div><p>문제1. 다음 보기에 있는 텍스트 필드에 작성한 문자열의 길이를 알아올수 있도록 구현하시오</p></div>
+<fieldset>
+    <legend>보기</legend>
+    <input id="test1" type="text" name="test">
+</fieldset>
+
+    <div id="result1">
+    </div>
+    <button onclick ="button1();">확인하기</button>
+</body>
+</html>
+</html>

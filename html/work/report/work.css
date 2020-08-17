@@ -1,0 +1,44 @@
+#datebox {
+  display: none;
+}
+#inputbox {
+  display: none;
+}
+
+#totalbox {
+  background: #ffb300;
+  padding: 10px 10px 10px;
+  width: 500px;
+}
+#under {
+  text-decoration: underline;
+}
+#ttable {
+  height: 250px;
+  width: auto;
+  border: 1px solid black;
+}
+td:first-child {
+  background-color: cornsilk;
+  color: #ff6f00;
+  font-weight: bold;
+  font-size: 15px;
+}
+tr,
+td {
+  border: 1px solid black;
+}
+#ltd {
+  background-color: white;
+  text-align: center;
+}
+td > label[for="all"] {
+  color: blue;
+  font-size: 10px;
+  font-style: italic;
+}
+#raintb {
+  border: 1px black solid;
+  height: 250px;
+  width: auto;
+}

@@ -7,6 +7,7 @@
       src="https://kit.fontawesome.com/464965a728.js"
       crossorigin="anonymous"
     ></script>
+    <script src="/javascript/index.js"></script>
     <link rel="icon" href="" type="image/x-icon" />
     <!-- css임포트해주는 css파일을 불러오는곳 -->
     <link rel="stylesheet" href="/css/set.css" />
@@ -23,9 +24,11 @@
           <li><a href="#">고객센터</li></a>
         </ul>
       </nav>
-      <div id="bimg">헤더에 이미지</div>
-      
-    </header>
+      <div id="bimg">
+        <div class="search"><input type="text" name="" id="bookser">
+          <button id="sear_b" onclick="search();"><i class="fas fa-search"></i></button></div>
+      </div>
+        </header>
     <nav>
       <div>
         <ul class=navbar>
@@ -37,14 +40,16 @@
         </ul>
       </div>
       <div id="searrank">
-        <div class="search"><input type="text" name="" id="bookser">
-        <button id="sear_b" onclick="search();"><i class="fas fa-search"></i></button></div>
+        
         <span class="rank">순위랭킹</span>
       </div>
     
     </nav>
     <section>
-      <div id="mainPo">사진</div>
+      <div id="mainPo">
+      
+        
+      </div>
       <div id="mainText">글귀</div>
     </section>
     <footer id="mainfoo">푸터

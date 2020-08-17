@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="work,.js"></script>
+    <link rel="stylesheet" href="work.css" />
+    <script src="work.js"></script>
     <title>실습문제1</title>
   </head>
   <body>
@@ -49,5 +50,256 @@
       </ul>
     </fieldset>
     <button onclick="sendmessage();"></button>
+    <hr />
+    <h1>실습문제3</h1>
+    <fieldset>
+      <legend>검색할 항목을 선택하세요</legend>
+
+      <input
+        type="radio"
+        name="dd"
+        id="title"
+        value="title"
+        onclick="changeBt(this.value);"
+      />
+      <label for="title">제목</label>
+      <input
+        type="radio"
+        name="dd"
+        id="todate"
+        value="date"
+        onclick="changeBt(this.value);"
+      />
+      <label for="todate">날짜</label>
+      <input
+        type="radio"
+        name="dd"
+        id="copyter"
+        value="writer"
+        onclick="changeBt(this.value);"
+      />
+      <label for="copyter">작성자</label>
+    </fieldset>
+    <hr />
+    <div id="totalbox">
+      <div id="titlebox">
+        <label for="tt">검색할 제목을 입력하세요</label>
+        <br />
+        <input type="text" id="tt" />
+        <input type="button" value="검색" />
+      </div>
+      <div id="datebox">
+        <label for="td">검색할 날짜를 선택하세요:</label>
+        <br />
+        <input type="datetime-local" name="" id="td" />
+        <input type="button" value="검색" />
+      </div>
+      <div id="inputbox">
+        <label for="pp">검색할 작성자 아이디를 입력하세요</label>
+        <br />
+        <input type="text" id="pp" />
+        <input type="button" value="검색" />
+      </div>
+    </div>
+    <hr />
+    <h2 id="under">거래처 등록</h2>
+    <table id="ttable">
+      <tr>
+        <td><label for="tname">거래처명</label></td>
+        <td><input type="text" id="tname" /></td>
+      </tr>
+      <tr>
+        <td><label for="address">주소</label></td>
+        <td><input type="text" id="address" size="50" /></td>
+      </tr>
+      <tr>
+        <td><label for="phone">전화번호</label></td>
+        <td><input type="text" id="phone" /></td>
+      </tr>
+      <tr>
+        <td><label for="">품명(중고품)</label></td>
+        <td>
+          <input type="checkbox" name="" id="1" /><label for="1"
+            >메인보드</label
+          >
+          <input type="checkbox" name="" id="2" /><label for="2">모니터</label>
+          <input type="checkbox" name="" id="3" /><label for="3">프린터</label>
+          <input type="checkbox" name="" id="4" /><label for="4"
+            >하드디스크</label
+          >
+          <input type="checkbox" name="" id="5" /><label for="5">메모리</label>
+          <input type="checkbox" name="" id="6" /><label for="6">CPU</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="all">모두선택/해제</label
+          ><input
+            onclick="allck(this.value);"
+            type="checkbox"
+            name=""
+            id="all"
+            value="1"
+          /><br /><label for="tname">품명(수입산)</label>
+        </td>
+        <td>
+          <input type="checkbox" name="" id="11" class="ck" /><label for="11"
+            >메인보드</label
+          >
+          <input type="checkbox" name="" id="22" class="ck" /><label for="22"
+            >모니터</label
+          >
+          <input type="checkbox" name="" id="33" class="ck" /><label for="33"
+            >프린터</label
+          >
+          <input type="checkbox" name="" id="44" class="ck" /><label for="44"
+            >하드디스크</label
+          >
+          <input type="checkbox" name="" id="55" class="ck" /><label for="55"
+            >메모리</label
+          >
+          <input type="checkbox" name="" id="66" class="ck" /><label for="66"
+            >CPU</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" id="ltd">
+          <input type="submit" value="등록" />
+          <input type="submit" value="취소" />
+        </td>
+      </tr>
+    </table>
+
+    <h2>기본 문법 문제</h2>
+    <div>
+      <p>
+        문제1. 다음 보기에 있는 텍스트 필드에 작성한 문자열의 길이를 알아올수
+        있도록 구현하시오
+      </p>
+    </div>
+    <fieldset>
+      <legend>보기</legend>
+      <input id="test1" type="text" name="test" />
+    </fieldset>
+    <div id="result1"></div>
+    <button onclick="button1();">확인하기</button>
+
+    <div>
+      <p>
+        문제2.다음 보기에 있는 문자열을 (콤마)를 기준으로 잘라내어 하나하나
+        출력하시오
+      </p>
+    </div>
+    <fieldset>
+      <legend>보기</legend>
+      <div id="test2">콜라,사이다,햄버거,피자,한약</div>
+    </fieldset>
+    <div id="result2"></div>
+    <button onclick="button2();">확인하기</button>
+    <h1>배열 실습 문제1</h1>
+    <p>다음 보기에 있는 데이터들은 배열로 받고 하나의 배열로 합쳐보세요
+      이때 입력 필드에 배열에 있는 데이터를 전송하면 배열의 alert를 통하여 배열의 위치를 알려주고 없으면 존재하지 않습니다를 알려주면 됩니다
+      <fieldset>
+        <legend>보기</legend>
+       <div id="total">
+      사과,바나나,당근,<br>
+      김밥,치즈,떡볶이,햄버거,<br>
+      환타,사이다,콜라,<br>
+      고양이,강아지
+      </div>
+      </fieldset>
+      <input type="text" id="ttext">
+      <button onclick="sumbit();">전송 및 처리</button>
+    </p>
+    <h2>rainbowColor</h2>
+    <table id="raintb">
+      <tr>
+        <td>전체선택:</td>
+        <td id="td1"><input type="checkbox" name="" id="">빨
+          <input type="checkbox" class="" name="" id="">주
+          <input type="checkbox" class="" name="" id="">노
+          <input type="checkbox" class="" name="" id="">초
+          <input type="checkbox" class="" name="" id="">파
+          <input type="checkbox" class="" name="" id="">남
+          <input type="checkbox" class="" name="" id="">보
+        </td>
+      </tr>
+      <tr>
+        <td>하나</td>
+        <td id="td2"><input type="checkbox" name="" id="">빨
+          <input type="checkbox" class="" name="" id="">주
+          <input type="checkbox" class="" name="" id="">노
+          <input type="checkbox" class="" name="" id="">초
+          <input type="checkbox" class="" name="" id="">파
+          <input type="checkbox" class="" name="" id="">남
+          <input type="checkbox" class="" name="" id="">보</td>
+      </tr>
+      <tr>
+        <td>둘</td>
+        <td id="td3"><input type="checkbox" name="" id="">빨
+          <input type="checkbox" class="" name="" id="">주
+          <input type="checkbox" class="" name="" id="">노
+          <input type="checkbox" class="" name="" id="">초
+          <input type="checkbox" class="" name="" id="">파
+          <input type="checkbox" class="" name="" id="">남
+          <input type="checkbox" class="" name="" id="">보</td>
+      </tr>
+      <tr>
+        <td>셋</td>
+        <td id="td4"><input type="checkbox" name="" id="">빨
+          <input type="checkbox" class="" name="" id="">주
+          <input type="checkbox" class="" name="" id="">노
+          <input type="checkbox" class="" name="" id="">초
+          <input type="checkbox" class="" name="" id="">파
+          <input type="checkbox" class="" name="" id="">남
+          <input type="checkbox" class="" name="" id="">보</td>
+      </tr>
+      <tr>
+        <td>넷</td>
+        <td id="td5"><input type="checkbox" name="" id="">빨
+          <input type="checkbox" class="" name="" id="">주
+          <input type="checkbox" class="" name="" id="">노
+          <input type="checkbox" class="" name="" id="">초
+          <input type="checkbox" class="" name="" id="">파
+          <input type="checkbox" class="" name="" id="">남
+          <input type="checkbox" class="" name="" id="">보</td>
+      </tr>
+      <tr>
+        <td>다섯</td>
+        <td id="td6"><input type="checkbox" name="" id="">빨
+          <input type="checkbox" class="" name="" id="">주
+          <input type="checkbox" class="" name="" id="">노
+          <input type="checkbox" class="" name="" id="">초
+          <input type="checkbox" class="" name="" id="">파
+          <input type="checkbox" class="" name="" id="">남
+          <input type="checkbox" class="" name="" id="">보</td>
+      </tr>
+      <tr>
+        <td>여섯</td>
+        <td id="td7"> <input type="checkbox" name="" id="">빨
+          <input type="checkbox" class="" name="" id="">주
+          <input type="checkbox" class="" name="" id="">노
+          <input type="checkbox" class="" name="" id="">초
+          <input type="checkbox" class="" name="" id="">파
+          <input type="checkbox" class="" name="" id="">남
+          <input type="checkbox" class="" name="" id="">보</td>
+      </tr>
+      <tr>
+        <td>일곱</td>
+        <td id="td8"><input type="checkbox"  name="tb7" id="">빨
+          <input type="checkbox"  name="tb7" id="">주
+          <input type="checkbox"  name="tb7" id="">노
+          <input type="checkbox"  name="tb7" id="">초
+          <input type="checkbox"  name="tb7" id="">파
+          <input type="checkbox"  name="tb7" id="">남
+          <input type="checkbox"  name="tb7" id="">보</td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center;"><input type="submit" value="submit"><input type="submit" value="submit"></td>
+       
+      </tr>
+    </table>
+  
   </body>
 </html>

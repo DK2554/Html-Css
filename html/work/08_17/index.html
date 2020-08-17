@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>객체의 선언 및 호출</h1>
+    <p>
+      자바스크립트에서 객체는 key/value형식으로 저장되며, 모든 자료형을 보관할
+      수 있음.
+    </p>
+    <h1>객체 배열</h1>
+    <p>여러개의 객체를 보관할 수 있는 배열</p>
+    <table id="table1"></table>
+    <h1>함수를 이용한 객체생성</h1>
+
+    <h3>생성자를 이용해서 객체를 생성하기!</h3>
+    <p>
+      new 연산자를 이용해서 객체를 생성한다는 의미 생성자도 결국 함수이기 때문에
+      생성자함수를 만들어서 이용을 함 생성자 함수는 첫글자를 대문자로 설정
+    </p>
+    <h3>캡슐화와 상속처리하기</h3>
+    <p>생성함수를 이용! 클로저의 개념함수(getter,setter)를 만듬.</p>
+    <h3>상속</h3>
+
+    <h1>윈도우 객체 알아보기</h1>
+
+    <h2>윈도우창 새로 만들기</h2>
+    <p>open()함수를 이용해서 윈도우창을 새로 만듬</p>
+    <button onclick="newWindow();">윈도우창 만들기</button>
+    <button onclick="newWindow2();">자식창 조작하기</button>
+    <div id="container"></div>
+
+    <h2>setTimeout(),setInterval()</h2>
+    <p>
+      setTimeout():일정시간 후 함수를 한번 실행하는것 setInterval():일정시간 후
+      함수를 지속적으로 실행하는것
+    </p>
+    <button onclick="setTimeoutTest();">setTimeout</button>
+    <button onclick="setInterValTest();">setInterVal</button>
+    <input type="text" id="check" />
+    <button onclick="closeWin();">윈도우닫아보자</button>
+    <h3>onload속성이용하기</h3>
+    <div id="container2"></div>
+    <h3>BOM객체 알아보기</h3>
+    <p>
+      대부분 정보를 전달하는 객체 navigator(브라우저 정보), screen(사용자
+      화면정보),location(url 창 정보);
+    </p>
+    <h3>location객체 알아보기</h3>
+    <p>
+      url창에 있는 정보를 가지고 수정할 수 있는 객체 특정이벤트에 의해 페이지를
+      변경할때 많이 사용하는 객체
+    </p>
+    <button onclick="locationInfo();">location알아보기</button>
+    <input type="text" id="addr" />
+    <button onclick="moveSite();">페이지 이동</button>
+    <div id="locationContent"></div>
+  </body>
+</html>
