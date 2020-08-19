@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script defer src="/Jquery/jquery-3.5.1.min.js"></script> -->
+    <title>jquery이용하기</title>
+    <!-- cdn방식으로 이용하기 -->
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script defer src="jquery.js"></script> -->
+    <script>
+      console.log($("h1"));
+      $(document).ready(() => {
+        //자바스크립트의 onload와 동일한 내용
+        console.log($("h1"));
+      });
+      //간단하게 onload적용하는 방법
+      //jQuery에서는 onload이벤트에 여러 함수가 실행되게 할수 있다.
+
+      $(() => {
+        console.log($("h1"));
+      });
+    </script>
+  </head>
+  <body>
+    <h1>jquery란 무엇인가?</h1>
+    <h1></h1>
+    <h1></h1>
+    <script>
+      $("h1").html("이것이 jquery");
+    </script>
+    <h2>jqeury선택자 알아보기</h2>
+    <p>기본선택자,id,class,태그 선택자</p>
+    <h1 id="test">test아이디</h1>
+    <h2 class="a">a클래스</h2>
+    <h3 class="a">a클래스</h3>
+    <p class="a">a클래스 p</p>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <script>
+      console.log($("#test"));
+      console.log($(".a"));
+      console.log($("li"));
+      $("#test").css("backgroundColor", "coral");
+      $(".a").css("backgroundColor", "blue");
+      $("li").css("color", "green");
+    </script>
+
+    <h1>filtering을 통한 객체 탐색하기</h1>
+    <h3>1</h3>
+    <h3>2</h3>
+    <h3>3</h3>
+    <h3>4</h3>
+    <script>
+      $(function () {
+        $("h3").css("backgroundColor", "lighcoral");
+      });
+    </script>
+  </body>
+</html>
