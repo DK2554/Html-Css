@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="study.css" />
+    <script defer src="study.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>locatino객체의 함수를 이용해서 페이지 이동하기</p>
+    <button onclick="asingTest();">asing이동</button>
+    <button onclick="location.replace('http://www.naver.com');">
+      replace이동
+    </button>
+    <button onclick="location.reload();">새로고침</button>
+    <h3>navigator알아보기</h3>
+    <p>client브라우저에 대한 정보를 가지고 있는 객체</p>
+    <button onclick="navigatorInfo();"></button>
+    <div id="navigator"></div>
+
+    <h3>screen객체 알아보기</h3>
+    <button onclick="screenInfo();">스크린정보</button>
+    <div id="screenInfo"></div>
+    <button onclick="history.back();">뒤로가기</button>
+
+    <h3>DOM</h3>
+    <button onclick="addFile();">추가</button><br />
+    <input type="file" />
+    <div id="addElement"></div>
+
+    <input type="text" id="tag" />
+    <input type="text" id="content" />
+    <p id="addtext">a</p>
+    <button onclick="textadd();"></button>
+    <div id="inputext"></div>
+
+    <h3>텍스트노드가 없는 태그 생성하기</h3>
+    <p>속성값을 설정해서 출력하는 태그들....img,audio,video</p>
+    <input type="text" id="path" placeholder="이미지경로를 적으세요" />
+    <button onclick="addImg();">이미지추가하기</button>
+    <button onclick="deleteImg();">태그 삭제하기</button>
+    <div id="imgContainer"></div>
+
+    <h1 id="target" onclick="change();" class="back1">Raclass 화이팅!</h1>
+
+    <h1>이벤트 속성 알아보기</h1>
+    <p>focus:element에 focus 되었을때 input태근</p>
+    <p>blur:element에 focus를 잃었을때 input태그</p>
+    <p>change:객체의 내용이 변경 input/select value값이 변경된 후 발생</p>
+    <p>submit:폼이 전송될때</p>
+    <p>reset:폼이 취소 됐을때</p>
+
+    <p>click: element 마우스로 클릭했을 때</p>
+    <p>dbclick:element 마우스로 더블클릭했을 때</p>
+    <p>mouseenter : element에 마우스 pointer가 들어왔을 때</p>
+    <p>element는 범위를 얘기한다</p>
+    <p>mouseleave:element에서 마우스 pointer가 벗어났을때</p>
+    <p>mouseover:element에 마우스가 올라갔을때</p>
+
+    <p>keydown:키를 눌렀을 때</p>
+    <p>keyup:키가 올라왔을때</p>
+    <p>keypress:눌렀다가 떨어졌을때</p>
+
+    <p>load:페이지가 로드 됐을때</p>
+    <p>resize:윈도우창 크기가 조절됐을때</p>
+    <p>sroll: 스크롤바를 조작할 때</p>
+
+    <h2>이벤트 연결하기</h2>
+    <p>고전방식으로 연결하기</p>
+    <!-- <h3 id="ttarget">클릭스 어떤 이벤트 발생?</h3> -->
+    <h3>클릭시 어떤 이벤트 발생?</h3>
+    <h3>클릭시 어떤 이벤트 발생?</h3>
+    <h3>클릭시 어떤 이벤트 발생?</h3>
+    <h3>클릭시 어떤 이벤트 발생?</h3>
+
+    <table>
+      <tr>
+        <td>이거변겅</td>
+        <td><button class="change2">변경1</button></td>
+      </tr>
+      <tr>
+        <td>이거변경</td>
+        <td><button class="change2">변경2</button></td>
+      </tr>
+      <tr>
+        <td>이거변경</td>
+        <td><button class="change2">변경3</button></td>
+      </tr>
+    </table>
+
+    <h3>표준이벤트 적용</h3>
+    <p>표준 이벤트 적용은 addEventListener()함수를 이용해서 처리함</p>
+
+    <label for="pw">비밀번호</label><input type="password" id="pw" /><br />
+    <label for="rpw">비밀번호확인</label><input type="password" id="rpw" /><span
+      id="result"
+    ></span>
+    <br />
+    <h3>기본 이벤트 차단하기</h3>
+    <p>
+      a태그 input-submit
+    </p>
+    <a id="move" onclick="prevent(event);" href="http://www.naver.com"
+      >네이버!</a
+    >
+    <form action="">
+      <input type="text" name="name" id="name" />
+      <input type="password" name="ppw" id="ppw" />
+      <input type="submit" value="전송" onclick="return checkData();" />
+    </form>
+    <!-- 유효성 검사를 할때 사용한다 -->
+
+    <div class="div1">
+      <div class="div2">
+        <div class="div3"></div>
+      </div>
+    </div>
+
+    <h3>정규표현식 활용</h3>
+    <p>정규표현식은 자바스크립트 RegExp객체를 이용해서 활용함</p>
+  </body>
+</html>

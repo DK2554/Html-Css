@@ -1,6 +1,6 @@
 var obj = {};
 console.log(obj, typeof obj);
-
+//리터럴로 선언한 객체
 obj = {
   name: "유병승",
   age: 19,
@@ -73,6 +73,7 @@ changobj["hobby"] = ["공부", "코로나퇴치"];
 console.log(changobj);
 //property를 삭제? 가능??
 //delete()함수를 이용해서 삭제함
+//.접근연산자를 사용해서 속성을 삭제함
 delete changobj.age;
 console.log(changobj);
 
@@ -135,7 +136,8 @@ function studentCreate(name, greade, gradePoint) {
 students.push(studentCreate("온영석", 3, { kor: 50, eng: 40, math: 60 }));
 console.log(students);
 
-//생성자 함수 만드릭
+//생성자 함수 만들기
+//생성자 함수의 첫글자는 대문자로 암묵적인 양식지키기
 function Student(name, greade, greadePoint) {
   this.name = name;
   this.greade = greade;
@@ -146,6 +148,7 @@ function Student(name, greade, greadePoint) {
     return this.name + " " + this.greade + " " + gstr;
   };
 }
+//new연산자를 통해서 객체를 생성함
 students.push(new Student("강범석", 2, { kor: 40, eng: 30, math: 30 }));
 console.log(students);
 console.log(students[4]["name"]);

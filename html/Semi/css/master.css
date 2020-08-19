@@ -1,0 +1,146 @@
+@import url("reset.css");
+
+body {
+  height: 100vh;
+}
+#header_nav > ul {
+  padding-left: 0px;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+#header_nav > ul > li {
+  position: relative;
+  margin-left: 20px;
+  font-size: 13px;
+  padding: 15px 0px 15px 0px;
+}
+#header_nav > ul > li > a {
+  padding-bottom: 15px;
+}
+#header_nav {
+  position: relative;
+  border-bottom: 1px solid #cfd8dc;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  background-color: #f7f2e7;
+}
+#search_menu {
+  background-color: #e0ece4;
+  height: 20vh;
+}
+#search_container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding-top: 50px;
+  width: 1000px;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
+}
+#search_input {
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  text-align: center;
+}
+#search_input::placeholder {
+  opacity: 0.5;
+}
+#search_bt {
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  background-color: #f8bbd0;
+  font-size: 10px;
+  color: white;
+}
+#search_bt:hover {
+  background-color: #c48b9f;
+}
+#main_logo {
+  height: 10vh;
+  text-align: center;
+}
+#nav_menu > ul {
+  height: 50px;
+  width: 1000px;
+  margin: 0 auto;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+#nav_menu li a {
+  font-weight: bold;
+  font-size: 15px;
+  margin-right: 10px;
+  color: white;
+  padding: 0px 10px 0px 10px;
+  position: relative;
+}
+/* 메뉴에 마우스 올렸을때 밑줄치는효과주기 */
+#nav_menu ul li a::before {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: 0.2s;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+}
+
+#nav_menu ul li a:hover::before {
+  width: 100%;
+  background-color: #212121;
+}
+#input_inbt {
+  width: 350px;
+  height: 30px;
+  display: flex;
+  padding-left: 200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+input:focus {
+  outline: none;
+}
+input[type="text"] {
+  width: 90%;
+  height: 100%;
+  padding: 0px;
+}
+input[type="button"] {
+  width: 10%;
+  height: 100%;
+  padding: 0px;
+}
+#img_slider {
+  height: 55vh;
+  background-color: #d8d3cd;
+}
+#footer_container {
+  height: 20vh;
+  background-color: #797a7e;
+  /* footer바닥에 고정 */
+  /* position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; */
+}
+#scetion_text {
+  height: 30vh;
+  background-color: #f7f2e7;
+}
+#header_logo {
+  font-size: 2em;
+  position: relative;
+  top: 40px;
+  font-family: "배달의민족 도현";
+  text-shadow: 0px 1px #ffffff, 4px 4px 0px #dad7d7;
+}
