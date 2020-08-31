@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filtering이용하기</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>filtering을 통한 객체 탐색하기</h1>
+        <h4>h4 1</h4>
+        <h3>1</h3>
+        <h3>2</h3>
+        <h3>3</h3>
+        <h3>4</h3>
+        <h4>h4 last</h4>
+        
+        <p class="1">p1</p>
+        <p>p2</p>
+        <p class="1">p3</p>
+        <p>p4</p>
+
+
+
+    </div>
+    <script>
+        $(function(){
+            $("h3:first,h3:odd").first().css("backgroundColor","lightcoral");
+            $("h3:first,h3:odd").last().css("backgroundColor","aqua");
+            //filter
+            //$().filter(선택자)
+            console.log($("div *").filter("h4"));
+            $("div *").filter("h4").css("color","lime");
+            //$().filter(조건식(함수)) -> true, false를 반화해서 true인것만 출력
+            $("p").filter(function(i,v){
+                console.log(i,v);   
+                //v -> element 순수자바스크립트를 반환
+                //jquery로 사용하려면 $(v) 넣어서 사용!
+                // v.css(); X -> $(v).css()
+                // v.html(); X -> $(v).html()
+                // $(v).html("안녕");
+                return $(v).attr("class")=="1";
+            }).css("fontSize","30px");
+            
+            
+            //eq를 이용해서 element선택하기
+            $("h3").eq(2).css("color","purple").html("변경됨.");
+            $("h3:eq(3)").css("backgroundColor","red");
+
+
+
+            //not함수 -> 부정
+            //not(선택자, 함수)
+            // $("p").not(".1").css("backgroundColor","green");
+            $("p").not(function(i,v){
+                return i==0;
+            }).css("backgroundColor","green");
+
+        });
+    </script>
+
+    <h2>부모태그 조회(순회)하기</h2>
+    <div id="container">
+        <div> div div의 부모
+            <div> div h1의 부모
+                <h1>h1 p의 부모
+                    <p>나는 p</p>
+                </h1>
+            </div>
+        </div>
+    </div>    
+    <script>
+        //p의 부모를 찾아서 배경색을 변경
+        $(function(){
+            console.log($("div#container p").parent());
+            $("div#container p").parent().css("backgroundColor","yellow");
+            $("div#container p").parent().parent().css("color","red");
+            //parent()함수는 선택된 객체의 바로위 부모element 한개 선택이 되는 함수
+
+            //parents() : 선택된 요소의 모든 부모요소를 리턴
+            console.log($("div#container p").parents());
+            $("div#container p").parents().css("fontSize","30px");
+            //매개변수로 선택자를 전달하면 그 선택자에 맞는 부모만 리턴
+            console.log($("div#container p").parents("#container"));
+            
+            //parentsUntil() : 모든부모, 범위설정해서 가져옴.
+            console.log($("div#container p").parentsUntil("div#container"));
+            $("div#container p").parentsUntil("div#container").first().css("backgroundColor","skyblue");
+            $("div#container p").parentsUntil("div#container").filter(function(i,v){
+                //console.log(v.tagName);
+                //$(v).prop("tagName")
+                //return v.tagName=="H1";
+                return $(v).prop("tagName")=="H1";
+            }).css("fontSize","13px");
+
+        })
+    </script>
+
+    <h3>자식요소 탐색하기</h3>
+    <p>
+        1. children([매개변수]) : 모든자손을 리턴해주는 함수
+        2. find(매개변수) : 모든 후손중 매개변수로 전달된것과 일치되는 요소를 리턴
+    </p>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><input type="text"></td>
+            <td><button>클릭</button></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td><input type="text"></td>
+            <td><button>클릭</button></td>
+        </tr>
+    </table>
+    <script>
+        //테이블내부의 tr들
+        $(function(){
+            console.log($("table>tbody").children().children());
+            console.log($("table>tbody").children().children("td").first());
+            //짝수 td요소만 배경색을 tomato로 설정
+            $("table>tbody").children().children("td").filter(function(i,v){
+                return i%2==0;
+            }).css("backgroundColor","tomato");
+            
+            //테이블안에 있는 input태그 찾기
+            console.log($("table").find("input"));
+        });
+        //children() : 선택된 요소와 직접연결된(자손) 요소를 탐색
+
+
+    </script>
+
+    <h3>형제요소 탐색하기!</h3>
+    <p>
+        1. $().siblings() : 선택된 요소의 앞뒤 모든요소(같은레벨에 있는)
+        2. next() : 선택된 요소의 뒤 한개요소
+        3. nextAll() : 선택된 요소의 뒤에 있는 모든 요소
+        4. nextUntil() : 선택된 요소의 뒤에 있는 매개변수와 일치하는 요소전 까지
+        5. prev() : 선택된 요소의 앞에 있는 한개요소
+        6. prevAll() : 선택된 요소의 앞에 있는 모든요소
+        7. prevUntil() : 선택된 요소의 앞에 있는 매개변수와 일치하는 요소뒤 까지
+    </p>
+    <hr>
+    <div id="container2">
+        <h2>h2 1</h2>
+        <h2>h2 2</h2>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <span>span1</span>
+        <span>span2</span>
+        <ul>
+            <li>li1</li>
+            <li>li2</li>
+            <li>li3</li>
+            <li>li4</li>
+        </ul>
+    </div>
+
+    <script>
+        $(function(){
+            //같은 레벨에 있는 모든 요소 찾기!
+           $("#container2>p:eq(2)").siblings().css("backgroundColor","hotpink");
+           //siblings(매개변수) : 같은레벨 요소중 매개변수와 일치하는 요소
+           $("#container2>p:eq(2)").siblings("span").css("backgroundColor","magenta");
+           
+            //앞에 요소 선택하기 prev();
+            $("#container2>span:first").prev().css("backgroundColor","lime");
+            //앞에 있는 요소 전체선택 : prevAll();
+            $("#container2>p").eq(1).prevAll().css("backgroundColor","navy");
+            //앞에 있는 요소 전체중 일정범위만 : prevUntil(매개변수);
+            $("#container2>ul").prevUntil("h2").css("backgroundColor","khaki");
+            //span첫번째꺼의 두개 앞에있는 요소에 접근
+            $("#container2>span:first").prev().prev().css("backgroundColor","purple");
+
+            //뒤에있는 요소 선택하기 next();
+            $("#container2>span:eq(1)").next().css("display","flex");
+            $("#container2>p:eq(3)").nextAll().css("color","white");
+        });
+    </script>
+    
+
+    <!-- 순회를 사용해보기 -->
+    <table id="test">
+        <tr>
+            <td><input type="text"></td>
+            <td><button class="addBtn">추가</button></td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td><button class="addBtn">추가</button></td>
+        </tr>
+        <tr>
+            <td><input type="text"></td>
+            <td>
+                <button class="addBtn">추가</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        $(".addBtn").click(function(e){
+            //alert("add버튼클릭!");
+            const t=e.target;
+            console.log($(t).parent().prev()
+            .html($(t).parent().prev().html()+"<input type='text'>"));
+        });
+    </script>
+
+    <h3>요소가 있는지 확인하는 함수 is()</h3>
+    <button onclick="checkElement();">있니?</button>
+
+    <script>
+        function checkElement(){
+            console.log($("#container2").children().is("table"));
+            if(!$("#container2").children().is("table")){
+                $("#container2").append("<table><tr><td>테이블추가</td></tr></table>");
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+</html>

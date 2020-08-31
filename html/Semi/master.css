@@ -1,4 +1,5 @@
-@import url(reset.css);
+@import url("reset.css");
+
 body {
   height: 100vh;
 }
@@ -27,12 +28,10 @@ a {
   color: black;
 }
 header {
-  /* background-color: #f7f2e7; */
-  background-color: #ffffff;
+  background-color: #f7f2e7;
 }
 #search_menu {
   background-color: #e0ece4;
-  /* background-color: #ffffff; */
   height: 20vh;
 }
 #search_container {
@@ -61,7 +60,6 @@ header {
 }
 #search_bt:hover {
   background-color: #c48b9f;
-  /* background-color: #ffffff; */
 }
 #main_logo {
   height: 10vh;
@@ -80,10 +78,9 @@ header {
   font-weight: bold;
   font-size: 15px;
   margin-right: 10px;
-  color: black;
+  color: white;
   padding: 0px 10px 0px 10px;
   position: relative;
-  text-shadow: 0px 1px #ffffff, 4px 4px 0px #bdbdbd;
 }
 /* 메뉴에 마우스 올렸을때 밑줄치는효과주기 */
 #nav_menu ul li a::before {
@@ -123,65 +120,24 @@ input[type="button"] {
   height: 100%;
   padding: 0px;
 }
-#img_slider {
+#msection {
   height: 55vh;
   background-color: #d8d3cd;
-  position: relative;
-  width: 600px;
-  margin: 0 auto;
 }
 #footer_container {
   height: 20vh;
   background-color: #797a7e;
-  text-align: center;
-
   /* footer바닥에 고정 */
   /* position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem; */
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; */
 }
-#section_text {
-  height: 20vh;
-  /* background-color: #f7f2e7; */
-  background-color: #ffffff;
-}
+
 #header_logo {
   font-size: 2em;
   position: relative;
   top: 40px;
   font-family: "배달의민족 도현";
-  text-shadow: 0px 1px #ffffff, 6px 6px 0px #dad7d7;
-}
-#header_img {
-  position: relative;
-  top: 50px;
-}
-
-.slide_wrapper {
-  position: relative;
-  width: 960px;
-  margin: 0 auto;
-  height: 300px;
-  overflow: hidden;
-}
-.slides {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: left 0.5s ease-out;
-}
-.slides li:not(:last-child) {
-  float: left;
-  margin-right: 30px;
-}
-.controls {
-  text-align: center;
-  margin-top: 50px;
-}
-.controls span {
-  background: #333;
-  color: #fff;
-  padding: 10px 20px;
-  margin: 0 10px;
+  text-shadow: 0px 1px #ffffff, 4px 4px 0px #dad7d7;
 }

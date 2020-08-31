@@ -7,13 +7,15 @@
       src="https://kit.fontawesome.com/464965a728.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="/javascript/index.js"></script>
+    <script defer src="/javascript/main.js"></script>
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/main.css" />
     <title>Main</title>
   </head>
   <body>
     <div id="main_container">
       <header id="main_logo">
+        <span id="header_img"><img src="/image/logo.png" height="40" /></span>
         <span id="header_logo">GP BOOK STORE</span>
       </header>
       <nav id="search_menu">
@@ -48,11 +50,27 @@
           </ul>
         </div>
       </nav>
-      <section>
-        <div id="img_slider">슬라이더 이미지</div>
-        <article id="scetion_text">글귀</article>
+      <section id="">
+        <div class="slide_wrapper">
+          <ul class="slides">
+           <li>1<img src="http://placehold.it/300x300" alt=""></li>
+             <li>2<img src="http://placehold.it/300x300" alt=""></li>
+               <li>3<img src="http://placehold.it/300x300" alt=""></li>
+               <li>4<img src="http://placehold.it/300x300" alt=""></li>
+               <li>5<img src="http://placehold.it/300x300" alt=""></li>
+               <li>6<img src="http://placehold.it/300x300" alt=""></li>
+               <li>7<img src="http://placehold.it/300x300" alt=""></li>
+               <li>8<img src="http://placehold.it/300x300" alt=""></li>
+          
+          </ul>
+        </div>
+         <p class="controls">
+            <span class="prev">prev</span>
+            <span class="next">next</span>
+          </p>
+        <article id="section_text">글귀</article>
       </section>
-      <footer id="footer_container"><p>Copy</p></footer>
+      <footer id="footer_container">Copyright @2020 GP Book Store</footer>
     </div>
   </body>
 </html>

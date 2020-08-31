@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="jquery-3.5.1.min.js"></script>
+    <script defer src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>each믄 활용</h1>
+    <div id="contatiner">
+      <h1>item-0</h1>
+      <h1>item-1</h1>
+      <h1>item-2</h1>
+      <h1>item-3</h1>
+    </div>
+    <h3>객체 병합하기,추가하기</h3>
+    <p>
+      $.extend()함수:여러개의 객체를 하나로 합칠때 사용
+    </p>
+    <button onclick="addObj();">객체합치기</button>
+
+    <h3>$변수 충돌방지하기</h3>
+    <p>$내용을 다른 변수명으로 변경: $.noConfilct</p>
+
+    <h1>클래스 활용하기</h1>
+    <div id="container">
+      <h1>h1</h1>
+      <p>p1</p>
+      <p>p2</p>
+      <span>span</span>
+      <h2>h2</h2>
+    </div>
+    <button onclick="addClass1();"></button>
+    <button onclick="removeClass1();">클래스 지우기</button>
+    <button onclick="toggleClass1();">토글적용하기</button>
+  </body>
+</html>
