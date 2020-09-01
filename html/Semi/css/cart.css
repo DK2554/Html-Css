@@ -3,6 +3,14 @@
 body {
   height: 100vh;
 }
+#cart_table {
+  border: 1px solid black;
+  margin: 0 auto;
+}
+#cart_table th {
+  font-size: 1em;
+  font: bold;
+}
 #header_nav > ul {
   padding-left: 0px;
   list-style: none;
@@ -21,6 +29,7 @@ body {
 }
 #header_nav {
   position: relative;
+
   border-bottom: 1px solid #cfd8dc;
 }
 a {
@@ -39,7 +48,7 @@ header {
   flex-flow: row;
   justify-content: space-between;
   padding-top: 50px;
-  width: 1000px;
+  width: 90%;
   margin: 0 auto;
   border-bottom: 1px solid black;
 }
@@ -67,7 +76,7 @@ header {
 }
 #nav_menu > ul {
   height: 50px;
-  width: 1000px;
+  width: 90%;
   margin: 0 auto;
   justify-content: space-around;
   display: flex;
@@ -124,7 +133,7 @@ input[type="button"] {
   height: 55vh;
   /* background-color: #d8d3cd; */
   background-color: #fff;
-  margin: 0 auto;
+  margin-top: 50px;
 }
 #footer_container {
   height: 20vh;
@@ -142,4 +151,36 @@ input[type="button"] {
   top: 40px;
   font-family: "배달의민족 도현";
   text-shadow: 0px 1px #ffffff, 4px 4px 0px #dad7d7;
+}
+.section_content {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1030px;
+  min-width: 690px;
+}
+.cart_lable {
+  font-size: 35px;
+  font-weight: 700px;
+  color: #545557;
+  font-family: "배달의민족 도현";
+}
+#page-title {
+  border-bottom: 1px solid black;
+  padding: 16px 0 35px;
+}
+
+#test-table {
+  border: 1px solid black;
+  width: 100%;
+  margin: 40px 0 30px;
+}
+#test-table th {
+  padding: 15px;
+  background-color: gray;
+}
+#test-table td:first-child {
+  padding: 20px;
+}
+#test-table td {
+  padding: 15px;
 }

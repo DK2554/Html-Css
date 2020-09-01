@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <script
+    src="https://kit.fontawesome.com/464965a728.js"
+    crossorigin="anonymous"
+  ></script>
     <title>참고</title>
   </head>
   <body>
@@ -42,9 +46,37 @@
           </ul>
         </div>
       </nav>
-      <section>
-        <div id="msection">본문</div>
-        <article id="scetion_text"></article>
+      <section class="section_content">
+      <div id="page-title"><span class="cart_lable">Cart</span></div>
+        <div id="msection">
+          <form action="#" method="POST" id="table-form">
+            <table id="test-table">
+              <tr>
+                <th>제품정보</th>
+                <th>가격</th>
+                <th>수량</th>
+                <th>total</th>
+                <th>삭제버튼</th>
+              </tr>
+              <tr>
+                <td><a href=""></a>샘플제품</td>
+                <td>18000원</td>
+                <td><input type="text" size="1" style="text-align: right;"></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <div class="cart-buy">
+              <div class="total">
+                <p>total금액 js처리</p>
+              </div>
+              <input type="submit">
+            </div>
+            </form>
+        </div>
+        <article id="scetion_text">
+
+        </article>
       </section>
       <footer id="footer_container"><p>Copy</p></footer>
   </body>
